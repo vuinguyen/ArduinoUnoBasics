@@ -1,3 +1,7 @@
+// Lights up a group of LEDs all at once, 
+// at different intervals/steps, from dimmest to brightest
+// and back to dim again
+
 int greenLED = 3;
 int yellowLED = 5;
 int redLED = 6;

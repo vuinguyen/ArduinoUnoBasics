@@ -1,3 +1,6 @@
+// Gradually lights up a group of LEDs all at once, 
+// from dimmest to brightest and back to dim again
+
 int greenLED = 3;
 int yellowLED = 5;
 int redLED = 6;
@@ -33,7 +36,6 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  // set the brightness of pin 9:
   analogWrite(greenLED, dutyCycle);
   analogWrite(yellowLED, dutyCycle);
   analogWrite(redLED, dutyCycle);

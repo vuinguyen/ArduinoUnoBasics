@@ -1,13 +1,13 @@
+// Blink an LED on/off
+
 // pin number 3
-  int greenLED = 3;
+int greenLED = 3;
 
-  // in milliseconds
-  int blinkPeriod = 500;  
+// in milliseconds
+int blinkPeriod = 500;  
 
-void setup() {
+void setup() {  
   // put your setup code here, to run once:
-
-  
   pinMode(greenLED, OUTPUT);
 }
 

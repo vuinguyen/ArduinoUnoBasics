@@ -1,16 +1,14 @@
+// Light up a series of LEDs, one at a time, in round robin fashion
+
 int greenLED = 3;
 int yellowLED = 5;
 int redLED = 6;
 
-int blinkPeriod = 500;
-
 int greenLEDState;
-String greenLEDMessage = "Green LED state is: ";
-
 int yellowLEDState;
 int redLEDState;
 
-String message;
+int blinkPeriod = 500;
 
 void setup() {
   // put your setup code here, to run once:
@@ -26,9 +24,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  greenLEDState = digitalRead(greenLED);
+  greenLEDState  = digitalRead(greenLED);
   yellowLEDState = digitalRead(yellowLED);
-  redLEDState = digitalRead(redLED);
+  redLEDState    = digitalRead(redLED);
 
   if (greenLEDState == 1) {
     digitalWrite(greenLED, LOW);
@@ -52,9 +50,4 @@ void loop() {
   }
  
   delay(blinkPeriod);
-  
-  //greenLEDState = digitalRead(greenLED);
-  //message = greenLEDMessage + greenLEDState;
-  //Serial.println(message);
-  //delay(blinkPeriod);
 }

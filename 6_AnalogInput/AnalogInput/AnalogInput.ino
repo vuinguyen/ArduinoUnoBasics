@@ -1,3 +1,8 @@
+// Gradually light up each LED, one at a time, 
+// as we turn up the knob on the potentiometer, 
+// and then gradually dim each LED, one at a time, 
+// as we turn down the knob on the potentiometer.
+
 int ledPin = 3;
 int potPin = A0;
 float potValue = 0;
@@ -34,7 +39,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  // read the value from the sensor:
+  // read the value from the potentiometer:
   potValue = analogRead(potPin);
   String message = "potValue: ";
   message += potValue;
@@ -42,15 +47,7 @@ void loop() {
 
   for (int thisPin = 0; thisPin < pinCount; thisPin++) {
     float remainder = potValue - ( (thisPin * maxPotValue) / (float)pinCount );
-    /*
-    message = "remainder ";
-    message += thisPin;
-    message += " : ";
-    message += remainder;
-    */
     
-    //Serial.println(message);
-    //delay(200);
     if (remainder >= third) {
       digitalWrite(ledPins[thisPin], HIGH);
     } else if (remainder <= 0) {
@@ -59,6 +56,5 @@ void loop() {
       int percentage = ( (remainder * maxDutyCycle) / third);
       analogWrite(ledPins[thisPin], percentage);
     }
-    
   }
 }
