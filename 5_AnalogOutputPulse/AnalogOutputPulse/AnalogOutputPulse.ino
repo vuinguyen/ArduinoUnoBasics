@@ -9,7 +9,7 @@ int redLED = 6;
 int holdOffTime = 1000;
 
 // period of the on-off pulse, in ms
-int pulsePeriod = 2000;
+int pulsePeriod = 3000;
 
 // a duty cycle of 100% is 255 in Arduino Land
 int maxDutyCycle = 255;
