@@ -14,8 +14,11 @@ The sketches in this project cover some basic concepts for programming the Ardui
 
 5) Analog Output Pulse - Gradually lights up a group of LEDs all at once, from dimmest to brightest and back to dim again
 
-6) Analog Input - Gradually light up each LED, one at a time, as we turn up the knob on the potentiometer, and then gradually dim each LED, one at a time, as we turn down the knob on the potentiometer. 
+6) Analog Input - Gradually light up each LED, one at a time, as we turn up the knob on the potentiometer, and then gradually dim each LED, one at a time, as we turn down the knob on the potentiometer.
 
 Videos for all these sketches can be found at:
 
 bit.ly/SunfishEmpireChannel
+
+Presentation slides for this code are at:
+https://www.slideshare.net/vui_nguyen/intro-to-hardware-programming-with-the-arduino-uno
